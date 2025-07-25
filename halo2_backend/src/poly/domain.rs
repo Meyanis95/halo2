@@ -436,8 +436,18 @@ impl<F: WithSmallOrderMulGroup<3>> EvaluationDomain<F> {
     }
 
     /// Get the inverse of the generator of the extended domain's multiplicative
+    pub fn get_extended_omega_inv(&self) -> F {
+        self.extended_omega_inv
+    }
+
+    /// Get the ifft divisor
     pub fn get_ifft_divisor(&self) -> F {
         self.ifft_divisor
+    }
+
+    /// Get the extended ifft divisor
+    pub fn get_extended_ifft_divisor(&self) -> F {
+        self.extended_ifft_divisor
     }
 
     /// Multiplies a value by some power of $\omega$, essentially rotating over
